@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo 'Cloning...'
-				git branch: 'final_project', url: 'https://github.com/valetodo/proyectoFinalAutomation.git'//cambiar la url de mi proyecto
+				git branch: 'final_project', url: 'https://github.com/ErnestoArmandoBolivia/proyectoest.git'// mi proyecto
             }//ese final_project debe estar mi rama de mi proyecto
         }
         stage('Review Repo') {

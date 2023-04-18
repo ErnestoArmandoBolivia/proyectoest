@@ -12,6 +12,6 @@ Scenario: Escenario 6 er los miembros desde arriba e ir a miembros pendientes
 
     Given the user go to miembros button
     When the user clicks the invitados button
-    Then the user should see "Welcome" text on the header nav
+    Then the user should see "Invitados" as validation escenario seis
 
 

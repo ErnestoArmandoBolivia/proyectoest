@@ -13,4 +13,4 @@ Scenario: Escenario 2 crear plantillas
     Given the user go to Plantilla button
     And the user sets the botton 1 on 1 Meeting agenda
     When the user clicks the Crearplantilla button
-    Then the user should see "Welcome" text on the header nav
+    Then the user should see "1-on-1 Meeting Agenda" as validation escenario dos

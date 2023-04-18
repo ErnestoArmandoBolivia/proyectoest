@@ -22,7 +22,8 @@ class escenarios extends BasePage {
     public cliceleccionlead:string='//div[@title="A Lead Management Pipeline by Crmble"]';
     public clicutilizarplantilla:string='//button[@class="R1FmqNQGU60Wlf bxgKMAm3lq5BpA SdamsUKjxSBwGb SEj5vUdI3VvxDc"]';
     public cliccrearplantillaizquierda:string='//input[@class="nch-button nch-button--primary wide js-submit"]';
-    
+    public cliccerrarpublicidad:string='//a[@class="plugin-chrome-close-button icon-lg icon-close js-close-plugin-chrome dark"]'
+
     //para mi cuarto escenario: Ir a vistas desde arriba y ver el calendario:
     public clicvistas:string = '//span[@class="boards-page-board-section-header-options-item-icon"]';
     public clicvercalendario:string = '//a[@title="Calendario"]';

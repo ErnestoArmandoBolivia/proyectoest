@@ -14,8 +14,9 @@ Scenario: Escenario 3 crear plantillas izquierda por defecto Lead
     And the user sets the clic en negocio
     And the user sets the clic eleccion Lead
     And the user sets the clic utlizar plantilla Lead
-    When the user clicks the Crearplantilla izquierda button
-    Then the user should see "Welcome" text on the header nav
+    And the user clicks the Crearplantilla izquierda button
+    When the user clic en cerrar anuncio
+    Then the user should see "A Lead Management Pipeline by Crmble" as validation escenario tres
 
 
 

@@ -26,4 +26,13 @@ Given('the user clicks the Crearplantilla button', async function () {
     await escenario.clickOnElement(escenario.crearplantilla);
 });
 
-
+//------------------------------------------------------------------------------
+Then('the user should see {string} as validation escenario dos', async function (name) {
+    const actualName = await headerPage.pvalidare2();
+    // expect(isVisible).true;
+    //await driverInstance.waitNetwork();
+    // const pageUrl = await driverInstance.getPageUrl();
+    expect(actualName).includes(name);
+         
+//    await driverInstance.closeDriver();
+});

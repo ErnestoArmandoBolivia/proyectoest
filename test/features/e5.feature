@@ -13,5 +13,5 @@ Scenario: Escenario 6 cambiar el tema para volverlo a tema original
 
     Given the user go to cambio de tema button
     When the user clicks volver a original button
-    Then the user should see "Welcome" text on the header nav
+    Then the user should see color azul "#0079BF" as validation escenario cinco
 

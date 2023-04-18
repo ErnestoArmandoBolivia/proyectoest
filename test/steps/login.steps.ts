@@ -9,18 +9,11 @@ import { loginPage } from "../../src/pages/login.page";
 setDefaultTimeout(60 * 1000);
 
 Given('the user logged into Todoist', async function () {
-    // console.log(process.env.PASSWORD);   
-    // const email = TESTDATA.email == '' ? process.env.EMAIL as string : TESTDATA.email;
-    // const password = TESTDATA.password == '' ? process.env.PASSWORD as string : TESTDATA.password;
-    //process.env['EMAIL']='agv417@gmail.com';
-    //console.log(process.env);   
-
-    // await loginPage.setEmail(email);
-    // await loginPage.setPassword(password);
+   
     await loginPage.setEmail(TESTDATA.email);
     await loginPage.setPassword(TESTDATA.password);
     await loginPage.clickLogin();
-    const isVisible = await headerPage.isNameInNavHeader();
+    const isVisible = await headerPage.nombreincluidoencabezado();
     expect(isVisible).true;
 });
 //para iniciar el primer clic
@@ -51,7 +44,7 @@ When('the user clicks the Iniciar sesion button', async function () {
 });
 
 Then('the user should see {string} text on the header nav', async function (name) {
-    const actualName = await headerPage.isNameInNavHeader();
+    const actualName = await headerPage.nombreincluidoencabezado();
     // expect(isVisible).true;
     //await driverInstance.waitNetwork();
     // const pageUrl = await driverInstance.getPageUrl();

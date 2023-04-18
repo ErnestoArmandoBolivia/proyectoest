@@ -1,7 +1,7 @@
 @login @ui-tests @escenario1
-Feature: Escenario 1
+Feature: Escenario 1 
 
-Scenario: Escenario 1
+Scenario: Escenario 1 Crear tablero
 
  Given the user go to Iniciar sesion button
     And the user sets the email
@@ -14,4 +14,4 @@ Scenario: Escenario 1
     And the user sets the botton Crear Tablero
     And the user sets the titulo del Tablero
     When the user clicks the Crear button
-    Then the user should see "Welcome" text on the header nav
+    Then the user should see "pruebaexamen" as validation escenario uno

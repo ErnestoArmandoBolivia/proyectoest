@@ -3,7 +3,7 @@ import { expect } from "chai";
 import { TESTDATA } from "../../config.app";
 import { driverInstance } from "../../src/core/driver";
 import { headerPage } from "../../src/pages/components/header.page";
-//import { loginPage } from "../../src/pages/login.page";
+
 import { escenario } from "../../src/pages/6escenarios.page";
 
 
@@ -28,11 +28,6 @@ Given('the user sets the titulo del Tablero', async function () {
     await escenario.settitulotablero(titulotablero);
     // await loginPage.setEmail(TESTDATA.email);
 });
-/*Given('the user sets the password', async function () {
-    const password = TESTDATA.password == '' ? process.env.PASSWORD as string : TESTDATA.password;
-    await loginPage.setPassword(password);
-    // await loginPage.setPassword(TESTDATA.password);
-});*/
 
 //para el boton crear finalizando
 Given('the user clicks the Crear button', async function () {
@@ -41,16 +36,19 @@ Given('the user clicks the Crear button', async function () {
 });
 
 
-
-/*Then('the user should see {string} text on the header nav', async function (name) {
-    const actualName = await headerPage.isNameInNavHeader();
+//-------------------------------------------------------------------------------------------
+Then('the user should see {string} as validation escenario uno', async function (name) {
+    const actualName = await headerPage.pvalidare1();
     // expect(isVisible).true;
     //await driverInstance.waitNetwork();
     // const pageUrl = await driverInstance.getPageUrl();
     expect(actualName).includes(name);
          
 //    await driverInstance.closeDriver();
-});*/
+});
+
+
+
 
 
 

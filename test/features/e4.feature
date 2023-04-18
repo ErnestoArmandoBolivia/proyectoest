@@ -12,6 +12,6 @@ Scenario: Escenario 4 crear plantillas
 
     Given the user go to Clicvistas button
     When the user clicks the ver calendario button
-    Then the user should see "Welcome" text on the header nav
+    Then the user should see "Calendario" as validation escenario cuatro
 
   

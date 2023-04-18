@@ -7,4 +7,4 @@ Scenario: Trello Login
     And the user set the botton Continuar
     And the user sets the password
     When the user clicks the Iniciar sesion button
-    Then the user should see "Welcome" text on the header nav
+    Then the user should see "Espacios de trabajo" text on the header nav
