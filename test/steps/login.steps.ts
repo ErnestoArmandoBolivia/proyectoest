@@ -23,7 +23,11 @@ Given('the user logged into Todoist', async function () {
     const isVisible = await headerPage.isNameInNavHeader();
     expect(isVisible).true;
 });
-
+//para iniciar el primer clic
+Given('the user go to Iniciar sesion button', async function (): Promise<void> {
+    await loginPage.clickOnElement(loginPage.logintrello);
+});
+//para darle el email en el login:
 Given('the user sets the email', async function () {
 //    await driverInstance.start(TESTDATA.url);
     const email: string = TESTDATA.email == '' ? process.env.EMAIL as string : TESTDATA.email;
@@ -36,8 +40,13 @@ Given('the user sets the password', async function () {
     await loginPage.setPassword(password);
     // await loginPage.setPassword(TESTDATA.password);
 });
+//para el boton continuar
+Given('the user set the botton Continuar', async function () {
+    await loginPage.clickOnElement(loginPage.botoncontinuar);
+    // await loginPage.setPassword(TESTDATA.password);
+});
 
-When('the user clicks the Login button', async function () {
+When('the user clicks the Iniciar sesion button', async function () {
     await loginPage.clickLogin();
 });
 
@@ -50,6 +59,4 @@ Then('the user should see {string} text on the header nav', async function (name
          
 //    await driverInstance.closeDriver();
 });
-Given('the user go to login button', async function (): Promise<void> {
-    await headerPage.clickOnNavLogin()
-});
+

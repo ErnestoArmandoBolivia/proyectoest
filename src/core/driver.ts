@@ -8,13 +8,13 @@ export class Driver {
     private static driver: Driver;
 
     private constructor(){}
-
+//para abrir el navegador e iniciar los drivers
     async start(url: string,browserName: string = 'chrome') {
         console.log('INIT ELEMENTS');
-        const browserInstance: BrowserType<{}> = await this.browserFactory(browserName);;
+        const browserInstance: BrowserType<{}> = await this.browserFactory(browserName);;//fevuelve una instancia de ese driver
         this.browser = await browserInstance.launch(
         {
-            //headless: false,
+            headless: false,
             slowMo: 3000
         }
         );
@@ -61,7 +61,7 @@ export class Driver {
         await this.browser.close();      
     }
 
-    private async browserFactory(browserName: string): Promise<BrowserType<{}>>{
+    private async browserFactory(browserName: string): Promise<BrowserType<{}>>{//las instancias de los navegadores
         const browsers: {[id: string]: BrowserType<{}>} = {
             chrome: chromium,
             firefox: firefox,

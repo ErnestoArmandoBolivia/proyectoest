@@ -3,7 +3,8 @@ import {BasePage} from "../base.page";
 
 class HeaderPage extends BasePage {
     // private homeIcon: string = 'button[data-gtm-id="burger-home-button"]';
-    private signInNavButton: string = "//div[@class='panel header']//li[@class='authorization-link']/a";
+    private signInNavButton: string = "//div[@class='panel header']//li[@class='authorization-link']/a"; //cambiar a mis locator propios
+    
     private nameLogin: string = '//div[@class="panel header"]//span[@class="logged-in"]';
 
     constructor() {

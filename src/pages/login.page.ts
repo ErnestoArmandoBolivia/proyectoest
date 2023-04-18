@@ -1,11 +1,15 @@
+//iniciar con el login al trello
 import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base.page";
 
 class LoginPage extends BasePage {
-    private email: string = '#email';
-    private password: string = '#pass';
-    private loginButton: string = '#send2';
-
+    public logintrello: string = '//div[@class="Buttonsstyles__ButtonGroup-sc-1jwidxo-3 jnMZCI"]//a[text()="Iniciar sesión"]';
+    public email: string = '//div[@class="email-password"]//input[contains(@placeholder,"Introduzca el correo electrónico")]';
+    public botoncontinuar: string = '//input[contains(@value,"Continuar")]';
+    public password: string = '#password';
+    public loginButton: string = '#login-submit';
+    
+    
     constructor(){
         super();
     }
